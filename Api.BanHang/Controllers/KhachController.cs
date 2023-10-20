@@ -105,12 +105,13 @@ namespace Api.BanHang.Controllers
             return model;
         }
         [Route("delete-khach")]
-        [HttpPost]
-        public KhachModel Delete([FromBody] KhachModel model)
+        [HttpDelete]
+        public int Delete(int Id)
         {
-            _khachBusiness.Delete(model);
-            return model;
+            _khachBusiness.Delete(Id);
+            return Id;
         }
+
         [Route("search")]
         [HttpPost]
         public IActionResult Search([FromBody] Dictionary<string, object> formData)

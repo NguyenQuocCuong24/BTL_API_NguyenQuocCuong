@@ -70,18 +70,13 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
-        public bool Delete(KhachModel model)
+        public bool Delete(int Id)
         {
             string msgError = "";
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_khach_delete",
-                "@Id", model.Id,
-                "@TenKH", model.TenKH,
-                "@GioiTinh", model.GioiTinh,
-                "@DiaChi", model.DiaChi,
-                "@SDT", model.SDT,
-                "@Email", model.Email);
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "deletekhachang",
+                "@id", Id);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -115,5 +110,6 @@ namespace DataAccessLayer
                 throw ex;
             }
         }
+
     }
 }
