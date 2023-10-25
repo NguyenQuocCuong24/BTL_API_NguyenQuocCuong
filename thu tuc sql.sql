@@ -46,7 +46,8 @@ AS
 	   values(@TenKH,@GioiTinh,@DiaChi,@SDT,@Email);
     END;
 
-	-----xóa khach hàng--
+
+-----xóa khach hàng--
 	SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -63,6 +64,38 @@ AS
 
 select * from KhachHangs
 
+
+-----update khách hàng 
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+alter PROCEDURE sp_khach_update
+   (
+    @Id int,
+	@TenKH nvarchar(50),
+	@GioiTinh bit,
+	@DiaChi nvarchar(50),
+	@SDT nvarchar(50),
+	@Email nvarchar(50)
+	)
+AS
+BEGIN
+	IF EXISTS (SELECT * FROM [dbo].[KhachHangs] WHERE Id = @Id)
+	BEGIN
+		UPDATE [dbo].[KhachHangs]
+		SET TenKH = @TenKH,
+		    GioiTinh = @GioiTinh,
+			DiaChi = @DiaChi,
+			SDT = @SDT,
+			Email = @Email
+		WHERE Id = @Id
+	END;
+END;
+
+select * from Khachhangs
+
+
 ---get hoa don---
 			create proc sp_hoadon_get_by_id
 				@MaHoaDon int
@@ -72,6 +105,21 @@ select * from KhachHangs
 			end;
 select * from HoaDons
 exec sp_hoadon_get_by_id '1'
+
+-- thu tuc xoa hoadon
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER proc [dbo].[deletehoadon]
+	@MaHoaDon int
+as
+begin
+	delete ct from [dbo].[HoaDons]  hd inner join ChiTietHoaDons ct on  hd.MaHoaDon = ct.MaHoaDon and hd.MaHoaDon = @MaHoaDon
+	delete from [dbo].[HoaDons] where MaHoaDon = @MaHoaDon
+end;
+
+select * from HoaDons
 
 --thêm hóa đơn--
 SET ANSI_NULLS ON
@@ -119,7 +167,7 @@ AS
         SELECT '';
     END;
 
----update hoad đơn 
+---update hóa đơn 
 	
 SET ANSI_NULLS ON
 GO
@@ -199,3 +247,31 @@ AS
       FROM TaiKhoans
       where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
     END;
+
+	--tim kiem--
+	SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create PROCEDURE [dbo].[sp_khach_update]
+   (
+    @Id int,
+	@TenKH nvarchar(50),
+	@GioiTinh bit,
+	@DiaChi nvarchar(50),
+	@SDT nvarchar(50),
+	@Email nvarchar(50)
+	)
+AS
+BEGIN
+	IF EXISTS (SELECT * FROM [dbo].[KhachHangs] WHERE Id = @Id)
+	BEGIN
+		UPDATE [dbo].[KhachHangs]
+		SET TenKH = @TenKH,
+		    GioiTinh = @GioiTinh,
+			DiaChi = @DiaChi,
+			SDT = @SDT,
+			Email = @Email
+		WHERE Id = @Id
+	END;
+END;

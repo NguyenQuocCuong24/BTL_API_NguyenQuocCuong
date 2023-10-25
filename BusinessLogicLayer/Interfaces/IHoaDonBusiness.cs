@@ -12,6 +12,7 @@ namespace BusinessLogicLayer
         HoaDonModel GetDatabyID(int id);
         bool Create(HoaDonModel model);
         bool Update(HoaDonModel model);
+        bool Delete(int maHoaDon);
         public List<ThongKeKhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao);
     }
 }

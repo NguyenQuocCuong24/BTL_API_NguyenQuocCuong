@@ -34,6 +34,13 @@ namespace Api.BanHang.Controllers
             _hoadonBusiness.Update(model);
             return model;
         }
+        [Route("delete-hoadon")]
+        [HttpDelete]
+        public int Delete(int maHoaDon)
+        {
+            _hoadonBusiness.Delete(maHoaDon);
+            return maHoaDon;
+        }
 
         [Route("search")]
         [HttpPost]
