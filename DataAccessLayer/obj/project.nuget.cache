@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kiv4baFv27v6f8LW3roCMB9s5jfirzkfMNUieA5ccW7nP3pykJyUcVgFrmK8euspyi21pf2GQQKfsVQ7D2A1eA==",
+  "dgSpecHash": "Wm+IdJHJah1BB73fyJfeTu+0zzl/zRMiWsu/F4okrLTJoFE4nvP7iUEYElebYSQf/ROkARR3b8yCAikV9GTIvg==",
   "success": true,
-  "projectFilePath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

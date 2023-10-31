@@ -2,23 +2,11 @@
 GO
 
 
---get Khachhang--
-alter proc sp_khach_get_by_id
-	@Id int
-as
-begin
-	select * from [dbo].[Khachhangs] where Id = @Id
-end;
+-- -------------tim Khachhang theo id------------
 
-select * from Khachhangs
-
---DROP PROCEDURE sp_khach_get_by_id--
- 
- SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER PROCEDURE [dbo].[sp_khach_get_by_id](@id int)
+CREATE PROCEDURE [dbo].[sp_khach_get_by_id](@id int)
 AS
     BEGIN
       SELECT  *
@@ -28,10 +16,7 @@ AS
 
 	EXEC [dbo].[sp_khach_get_by_id] @id = 2
 
------------------------------------
-	SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
+-------------them khach hàng--------------
 GO
 create PROCEDURE [dbo].[sp_khach_create](
 @TenKH nvarchar(50),
@@ -47,8 +32,8 @@ AS
     END;
 
 
------xóa khach hàng--
-	SET ANSI_NULLS ON
+--------------xóa khach hàng---------------
+-
 GO
 SET QUOTED_IDENTIFIER ON
 GO
@@ -65,7 +50,7 @@ AS
 select * from KhachHangs
 
 
------update khách hàng 
+---------------update khách hàng ---------------
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,8 +81,8 @@ END;
 select * from Khachhangs
 
 
----get hoa don---
-			create proc sp_hoadon_get_by_id
+--------------------tim hoa don theo id ----------------
+create proc sp_hoadon_get_by_id
 				@MaHoaDon int
 			as
 			begin
@@ -106,7 +91,10 @@ select * from Khachhangs
 select * from HoaDons
 exec sp_hoadon_get_by_id '1'
 
--- thu tuc xoa hoadon
+
+
+
+-- --------------thu tuc xoa hoadon------------
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,30 +109,29 @@ end;
 
 select * from HoaDons
 
---thêm hóa đơn--
+
+----------Hoa Don Create------------
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-create PROCEDURE sp_hoadon_create
+ALTER PROCEDURE sp_hoadon_create
 (@TenKH              NVARCHAR(50), 
- @GioiTinh        bit,
  @Diachi          NVARCHAR(250), 
- @TrangThai         bit,	
+ @TrangThai         bit,  
  @list_json_chitiethoadon NVARCHAR(MAX)
 )
 AS
     BEGIN
 		DECLARE @MaHoaDon INT;
-        INSERT INTO HoaDons
-                (TenKH,
-				 GioiTinh,
+        INSERT INTO HoaDon
+                (TenKH, 
                  Diachi, 
                  TrangThai               
                 )
                 VALUES
                 (@TenKH, 
-				 @GioiTinh,
                  @Diachi, 
                  @TrangThai
                 );
@@ -152,91 +139,103 @@ AS
 				SET @MaHoaDon = (SELECT SCOPE_IDENTITY());
                 IF(@list_json_chitiethoadon IS NOT NULL)
                     BEGIN
-                        INSERT INTO ChiTietHoaDons
-						 (MaSanPham, 
+                        INSERT INTO ChiTietHoaDon
+						 (MaSach, 
 						  MaHoaDon,
-                          SoLuong, 
-                          TongGia               
+                          Slban, 
+                          Giaban              
                         )
                     SELECT JSON_VALUE(p.value, '$.maSanPham'), 
                             @MaHoaDon, 
-                            JSON_VALUE(p.value, '$.soLuong'), 
-                            JSON_VALUE(p.value, '$.tongGia')    
+                            JSON_VALUE(p.value, '$.slBan'), 
+                            JSON_VALUE(p.value, '$.giaBan')    
                     FROM OPENJSON(@list_json_chitiethoadon) AS p;
                 END;
         SELECT '';
     END;
 
----update hóa đơn 
+select * from HoaDons
+
+EXEC [dbo].sp_hoadon_create
+ 
+
+
+---------------------update hóa đơn--------------------------
 	
-SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
 GO
-create PROCEDURE sp_hoa_don_update
+ALTER PROCEDURE [dbo].[sp_hoa_don_update]
 (@MaHoaDon        int, 
  @TenKH              NVARCHAR(50), 
+ @SdtKH				varchar(9),
  @Diachi          NVARCHAR(250), 
+ @Email				Varchar(50),
+ @NgayLapHD			datetime,
  @TrangThai         bit,  
  @list_json_chitiethoadon NVARCHAR(MAX)
 )
 AS
     BEGIN
-		UPDATE HoaDons
+		UPDATE HoaDon
 		SET
 			TenKH  = @TenKH ,
 			Diachi = @Diachi,
+			SdtKH = @SdtKH,
+			Email = @Email,
+			NgayLapHD = @NgayLapHD,
 			TrangThai = @TrangThai
 		WHERE MaHoaDon = @MaHoaDon;
 		
 		IF(@list_json_chitiethoadon IS NOT NULL) 
 		BEGIN
-
--- Insert data to temp table 
-
+			 -- Insert data to temp table 
 		   SELECT
 			  JSON_VALUE(p.value, '$.maChiTietHoaDon') as maChiTietHoaDon,
 			  JSON_VALUE(p.value, '$.maHoaDon') as maHoaDon,
-			  JSON_VALUE(p.value, '$.maSanPham') as maSanPham,
-			  JSON_VALUE(p.value, '$.soLuong') as soLuong,
-			  JSON_VALUE(p.value, '$.tongGia') as tongGia,
+			  JSON_VALUE(p.value, '$.maSach') as maSach,
+			  JSON_VALUE(p.value, '$.slBan') as slBan,
+			  JSON_VALUE(p.value, '$.giaBan') as giaBan,
 			  JSON_VALUE(p.value, '$.status') AS status 
 			  INTO #Results 
 		   FROM OPENJSON(@list_json_chitiethoadon) AS p;
 		 
--- Insert data to table with STATUS = 1;
-			INSERT INTO ChiTietHoaDons (MaSanPham, 
+		  --Insert data to table with STATUS = 1;
+			INSERT INTO Chitiethoadon (MaSach, 
 						  MaHoaDon,
-                          SoLuong, 
-                          TongGia ) 
+                          Slban, 
+                          Giaban ) 
 			   SELECT
-				  #Results.maSanPham,
-				  @MaHoaDon,
-				  #Results.soLuong,
-				  #Results.tongGia			 
+				  #Results.maSach,
+				  @MaHoaDon,		  
+				  #Results.slBan,
+				  #Results.giaBan			 
 			   FROM  #Results 
 			   WHERE #Results.status = '1' 
 			
--- Update data to table with STATUS = 2
-			  UPDATE ChiTietHoaDons 
+			 --Update data to table with STATUS = 2
+			  UPDATE Chitiethoadon
 			  SET
-				 SoLuong = #Results.soLuong,
-				 TongGia = #Results.tongGia
+				 SLban = #Results.slBan,
+				 Giaban = #Results.giaBan
 			  FROM #Results 
-			  WHERE  ChiTietHoaDons.maChiTietHoaDon = #Results.maChiTietHoaDon AND #Results.status = '2';
+			  WHERE  Chitiethoadon.MaChiTietHoaDon = #Results.maChiTietHoaDon AND #Results.status = '2';
 			
--- Delete data to table with STATUS = 3
+			 --Delete data to table with STATUS = 3
 			DELETE C
-			FROM ChiTietHoaDons C
+			FROM Chitiethoadon C
 			INNER JOIN #Results R
-				ON C.maChiTietHoaDon=R.maChiTietHoaDon
+				ON C.MaChiTietHoaDon=R.maChiTietHoaDon
 			WHERE R.status = '3';
 			DROP TABLE #Results;
 		END;
         SELECT '';
     END;
 
---- used
+select * from HoaDons
+
+
+
+------------------------ used-----------------------------
 GO
 SET QUOTED_IDENTIFIER ON
 GO

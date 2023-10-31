@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Api.BanHang/1.0.0": {
+      "Api.Banhang/1.0.0": {
         "dependencies": {
           "BusinessLogicLayer": "1.0.0",
           "DataModel": "1.0.0",
@@ -14,7 +14,7 @@
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
-          "Api.BanHang.dll": {}
+          "Api.Banhang.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.22": {
@@ -310,7 +310,7 @@
     }
   },
   "libraries": {
-    "Api.BanHang/1.0.0": {
+    "Api.Banhang/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

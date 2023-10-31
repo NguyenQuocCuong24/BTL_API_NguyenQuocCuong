@@ -1348,11 +1348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "projectUniqueName": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "projectName": "BusinessLogicLayer",
-      "projectPath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
+      "projectPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\BusinessLogicLayer\\BusinessLogicLayer.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\BusinessLogicLayer\\obj\\",
+      "outputPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\BusinessLogicLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1369,11 +1369,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\DataAccessLayer\\DataAccessLayer.csproj"
+            "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\DataAccessLayer\\DataAccessLayer.csproj"
             },
-            "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\DataModel\\DataModel.csproj": {
-              "projectPath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\DataModel\\DataModel.csproj"
+            "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\DataModel\\DataModel.csproj": {
+              "projectPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\DataModel\\DataModel.csproj"
             }
           }
         }

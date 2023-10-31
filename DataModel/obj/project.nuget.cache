@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AZRnIKjJPBDNUD/PxGBdWlaqbPdaVnvstkqsYmbHkuWAPfzFts/Z1szhCwef3rCXOiWuq7OOjyw1VB8xV9YvaQ==",
+  "dgSpecHash": "4RYl+k4ETyiKCxmo3Qp0Ejn277mO1YgvrQi1Xc6pM6pu0p6tsjTsEeX4LXlBHklRKh+G2Db/pICWN/fIRDZgMw==",
   "success": true,
-  "projectFilePath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\DataModel\\DataModel.csproj",
+  "projectFilePath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\DataModel\\DataModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -11,7 +11,7 @@ namespace DataAccessLayer
         }
 
         public HoaDonModel GetDatabyID(int id)
-        {
+        { 
             string msgError = "";
             try
             {
@@ -41,7 +41,7 @@ namespace DataAccessLayer
                     throw new Exception(Convert.ToString(result) + msgError);
                 }
                 return true;
-            }
+            }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
             catch (Exception ex)
             {
                 throw ex;

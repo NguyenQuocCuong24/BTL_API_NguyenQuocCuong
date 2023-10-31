@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4FYnAZwZd7+HLqpKuSaXcj6WKY0BTv4O9jaqKEhAq9FMjr32pWhIqisr4j+mMKZyPbz3fz8nH0hZvLZnKD7Z6Q==",
+  "dgSpecHash": "f548O7P0MNTVgF/QtmlPnIxuuLjXJc4vGxOzVieecPimybGTbuBof3558fiw3IvKM+VjRm/Ql3VaWMhEj/eCEw==",
   "success": true,
-  "projectFilePath": "E:\\WebAPI\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\Api.BanHang.csproj",
+  "projectFilePath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\Api.Banhang.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.22\\microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

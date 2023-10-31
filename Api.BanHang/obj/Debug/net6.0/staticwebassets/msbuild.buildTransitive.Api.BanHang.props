@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\Api.BanHang.props" />
+  <Import Project="..\buildMultiTargeting\Api.Banhang.props" />
 </Project>
