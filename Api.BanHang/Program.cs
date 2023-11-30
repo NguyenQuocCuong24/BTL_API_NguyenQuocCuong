@@ -1,8 +1,11 @@
 using BusinessLogicLayer;
+using BusinessLogicLayer.Interfaces;
 using DataAccessLayer;
+using DataAccessLayer.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +21,8 @@ builder.Services.AddTransient<IHoaDonRepository, HoaDonRepository>();
 builder.Services.AddTransient<IHoaDonBusiness, HoaDonBusiness>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserBusiness, UserBusiness>();
+builder.Services.AddTransient<ISanPhamDAL, SanPhamDAL>();
+builder.Services.AddTransient<ISanPhamBUS, SanPhamBUS>();
 
 // configure strongly typed settings objects
 IConfiguration configuration = builder.Configuration;

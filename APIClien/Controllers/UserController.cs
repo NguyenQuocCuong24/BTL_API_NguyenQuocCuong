@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using BusinessLogicLayer.Interfaces;
 using DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -25,4 +26,6 @@ namespace Api.Clien.Controllers
             return Ok(new { taikhoan = user.TenTaiKhoan, email = user.Email, token = user.token });
         }
     }
+   
 }
+

@@ -1687,9 +1687,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\Api.Banhang.csproj",
-      "projectName": "Api.Banhang",
-      "projectPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\Api.Banhang.csproj",
+      "projectUniqueName": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\Api.Admin.csproj",
+      "projectName": "Api.Admin",
+      "projectPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\Api.Admin.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
       "outputPath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\Api.BanHang\\obj\\",
       "projectStyle": "PackageReference",

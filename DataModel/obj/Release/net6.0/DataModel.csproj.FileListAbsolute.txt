@@ -1,0 +1,11 @@
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\bin\Release\net6.0\DataModel.deps.json
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\bin\Release\net6.0\DataModel.dll
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\bin\Release\net6.0\DataModel.pdb
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\DataModel.GeneratedMSBuildEditorConfig.editorconfig
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\DataModel.AssemblyInfoInputs.cache
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\DataModel.AssemblyInfo.cs
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\DataModel.csproj.CoreCompileInputs.cache
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\DataModel.dll
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\refint\DataModel.dll
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\DataModel.pdb
+E:\WebAPI _ All\BTL_API_WebBanKinh\BanHang\DataModel\obj\Release\net6.0\ref\DataModel.dll

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4ohO3IG0HzN0S3Pa2LNKaft/07YFz+AU6jzeh24rkZLMVKvX7GXvX8D6wSyRy/3UJXkjmu/b2wRJsPokAORHfw==",
+  "dgSpecHash": "94rkwfvH1+qdehSz3UTGIL9d365Awa0eWKMIl8jZSvR+Go9x++zJYSDTJnJoHXiXHaHMU8euLDBDXaeja4OYeQ==",
   "success": true,
-  "projectFilePath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\APIClien\\API.Clien.csproj",
+  "projectFilePath": "E:\\WebAPI _ All\\BTL_API_WebBanKinh\\BanHang\\APIClien\\API.NguoiDung.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.22\\microsoft.aspnetcore.authentication.jwtbearer.6.0.22.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
@@ -12,6 +13,8 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.32.3\\microsoft.identitymodel.abstractions.6.32.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.32.3\\microsoft.identitymodel.jsonwebtokens.6.32.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.logging\\6.32.3\\microsoft.identitymodel.logging.6.32.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.32.3\\microsoft.identitymodel.tokens.6.32.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

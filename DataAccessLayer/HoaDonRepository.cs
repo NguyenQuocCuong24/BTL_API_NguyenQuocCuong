@@ -11,7 +11,7 @@ namespace DataAccessLayer
         }
 
         public HoaDonModel GetDatabyID(int id)
-        { 
+        {
             string msgError = "";
             try
             {
@@ -35,6 +35,7 @@ namespace DataAccessLayer
                 "@TenKH", model.TenKH,
                 "@Diachi", model.Diachi,
                 "@TrangThai", model.TrangThai,
+                "@GioiTinh",model.GioiTinh,
                 "@list_json_chitiethoadon", model.list_json_chitiethoadon != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadon) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
@@ -53,11 +54,14 @@ namespace DataAccessLayer
             string msgError = "";
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "sp_hoa_don_update",
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "[sp_hoa_don_update]",
                 "@MaHoaDon", model.MaHoaDon,
                 "@TenKH", model.TenKH,
+                "@SdtKH",model.SDT,
+                "@Email",model.Email,
                 "@Diachi", model.Diachi,
                 "@TrangThai", model.TrangThai,
+                "@NgayLapHD", model.NgayLapHD,
                 "@list_json_chitiethoadon", model.list_json_chitiethoadon != null ? MessageConvert.SerializeObject(model.list_json_chitiethoadon) : null);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {

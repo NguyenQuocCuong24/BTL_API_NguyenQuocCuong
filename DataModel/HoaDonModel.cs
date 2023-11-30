@@ -10,8 +10,12 @@ namespace DataModel
     {
         public int MaHoaDon { get; set; }
         public string TenKH { get; set; }
-        public string GioiTinh { get; set; }
+        public bool GioiTinh { get; set; }
         public string Diachi { get; set; }
+        public string SDT { get; set; }
+        public string Email { get; set; }
+        public DateTime NgayLapHD { get; set; }
+
         public bool TrangThai { get; set; }
         public List<ChiTietHoaDonModel> list_json_chitiethoadon { get; set; }
     }

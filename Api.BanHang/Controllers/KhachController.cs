@@ -98,7 +98,7 @@ namespace Api.BanHang.Controllers
             return model;
         }
         [Route("update-khach")]
-        [HttpPost]
+        [HttpPut]
         public KhachModel UpdateItem([FromBody] KhachModel model)
         {
             _khachBusiness.Update(model);

@@ -5,10 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer
+namespace DataAccessLayer.Interfaces
 {
-    public partial interface IUserRepository
+    public interface IUserRepository
     {
-        UserModel Login(string taikhoan, string matkhau); 
+        UserModel Login(string taikhoan, string matkhau);
+        UserModel GetDatabyID(string accountid);
+        bool Create(UserModel model);
+        bool Update(UserModel model);
+        bool Delete(UserModel model);
     }
 }
